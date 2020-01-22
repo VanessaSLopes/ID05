@@ -3,14 +3,7 @@ title: "ID05"
 author: "Grupo 05"
 date: "16/01/2020"
 output:
-<<<<<<< HEAD
-  html_document: default
-  pdf_document: default
-=======
-  pdf_document: default
-  html_document: default
->>>>>>> 83bb9b37fb3442787c0c47d89600468bb09e4b79
----
+
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(error = TRUE)
@@ -129,20 +122,20 @@ View(TabelaFinal)
 
 ```
 
-```{r Análise classificatória}
+```{r Análise exploratória}
 
 Paises_mulheres_selecionados<- TabelaFinal[TabelaFinal$Country %in% c("Belgium", "Finland", "Italy", "Netherlands", "Portugal") & TabelaFinal$Sex=="Females" & TabelaFinal$ageGroup=="All",]
 View(Paises_mulheres_selecionados)
 Paises_mulheres_selecionados<-Paises_mulheres_selecionados[,-c(2,3,4,6,8)]
 
-#Analise Classificatória População
+#Analise exploratória População
 
 summary_pop<-Paises_mulheres_selecionados%>%
 group_by(Country)%>% 
 summarise(Mean=mean(pop), Max=max(pop), Min=min(pop), Median=median(pop), Std=sd(pop))
 View(summary_pop)
 
-#Analise Classificatória Nº de cancros
+#Analise exploratória Nº de cancros
 
 summary_cancro<-Paises_mulheres_selecionados%>%
 group_by(Country)%>% 
