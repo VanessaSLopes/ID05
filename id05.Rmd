@@ -68,7 +68,6 @@ POP<- rbind(POP, totoid)
 
 
 ```{r organizar dataframe dos cancros}
-
 #Cancros
 names(dadoscancro)
 novocancro<-dadoscancro[,-c(2,4,6)]
